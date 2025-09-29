@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    
+    int n; cin>>n;
+    //10 9 8 7 
+
+    while(n--){
+        string text;
+        string nombre= "Sebastian";
+        bool flag = true;
+        
+        getline(cin, text);
+        for(int i=0;i<nombre.length() ;i++){
+            if(text[i] != nombre[i]){
+                flag = false;
+            }
+        }
+        bool flag2 = false;
+        if(flag == true){
+            for(int i = 0; i < text.length(); i++){
+                if(text[i] == '5'){
+                    flag2 = true;
+                }
+                
+                if(flag2 == true){
+                    cout<<text[i];
+                }
+            }
+        }
+    }
+
+    return 0;
+}
