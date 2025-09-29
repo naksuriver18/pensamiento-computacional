@@ -1,0 +1,26 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int n, basA, basB, totalten=0;
+    cout<<"ingrese el numero: "; cin>>n;
+    cout<<"ingrese en que base se encuentra: "; cin>>basA;
+    cout<<"ingrese a que base desea convertir: "; cin>>basB;
+    int a[100], baseten[10];
+    for(int i=0;i<100;i++){
+        if(n>=0){
+            a[i]=n%10;
+            cout<<a[i]<<' ';
+            n=n/10;
+        }
+    }
+    int b = 1;
+    for(int i=0;i<100;i++){
+        baseten[i]=a[i]*b;// 4  * 1,  3 * 7, 2 * 49, 1 * 
+        totalten+=baseten[i];// 4, 21 + 4 = 25, 25 + 98 = 123 
+        b * basA;// 1 * 7 = 7, 7 * 7 = 49, 49 * 7
+    } 
+    cout<<totalten;
+    return 0;
+}
